@@ -5,17 +5,18 @@
 ```
 ┌────────────────────────────────────────────┐
 │   Frontend Layer (Vue 3 + Vite)            │
-│   Vercel/Netlify                          │
-│   https://<your-frontend>.vercel.app      │
+│   Vercel: https://conflict-tracker-juan-gonzalez.vercel.app
 └────────────────┬─────────────────────────┘
+                 │ VITE_API_URL
                  │
         ┌────────┴────────┐
         │                 │
         ↓                 ↓
    ┌────────────┐   ┌──────────────┐
    │  Spring    │   │  Supabase    │
-   │  Boot API  │   │  (Todos DB)  │
-   │  /api/v1   │   │              │
+   │  Boot API  │   │  (PostgreSQL)│
+   │  /api/v1   │   │  https://cnblimsqcyvurigapfpc.supabase.co
+   │  https://conflict-tracker-api-production.up.railway.app/api/v1 │
    └────────────┘   └──────────────┘
 ```
 
@@ -48,9 +49,15 @@ VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_QvRxzn71vEZHpbrqtQbTww_NERqRN-6
 En el dashboard de Vercel:
 
 ```env
-VITE_API_URL=https://<your-backend-railway>.railway.app/api/v1
+VITE_API_URL=https://conflict-tracker-api-production.up.railway.app/api/v1
 VITE_SUPABASE_URL=https://cnblimsqcyvurigapfpc.supabase.co
 VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_QvRxzn71vEZHpbrqtQbTww_NERqRN-6
+```
+
+También es importante que en Railway el backend tenga configurada la variable:
+
+```env
+FRONTEND_URL=https://conflict-tracker-juan-gonzalez.vercel.app
 ```
 
 ## Instalación y Ejecución
