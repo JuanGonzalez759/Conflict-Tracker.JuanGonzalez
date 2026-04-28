@@ -5,7 +5,7 @@
 ```
 ┌────────────────────────────────────────────┐
 │   Frontend Layer (Vue 3 + Vite)            │
-│   Vercel: https://conflict-tracker-juan-gonzalez.vercel.app
+│   Vercel: https://conflict-tracker-juan-gonzalez-cgag.vercel.app
 └────────────────┬─────────────────────────┘
                  │ VITE_API_URL
                  │
@@ -57,7 +57,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_QvRxzn71vEZHpbrqtQbTww_NERqRN-6
 También es importante que en Railway el backend tenga configurada la variable:
 
 ```env
-FRONTEND_URL=https://conflict-tracker-juan-gonzalez.vercel.app
+FRONTEND_URL=https://conflict-tracker-juan-gonzalez-cgag.vercel.app
 ```
 
 ## Instalación y Ejecución
